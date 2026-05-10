@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sidebar-w: 252px;
+
+  /* Brand */
+  --brand: #0f4c8a;
+  --brand-dark: #0a3566;
+  --brand-light: #e8f0fb;
+  --accent: #f97316;
+  --accent-light: #fff4ed;
+  --accent-dark: #c2500a;
+
+  /* Neutrals */
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --border: #e4e8f0;
+  --border-light: #f0f2f8;
+
+  /* Text */
+  --text: #0f1729;
+  --text-2: #3d4a63;
+  --text-3: #7c8db0;
+  --text-inv: #ffffff;
+
+  /* Semantic */
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --green-border: #bbf7d0;
+  --yellow: #d97706;
+  --yellow-bg: #fffbeb;
+  --yellow-border: #fde68a;
+  --red: #dc2626;
+  --red-bg: #fef2f2;
+  --red-border: #fecaca;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --blue-border: #bfdbfe;
+  --purple: #7c3aed;
+  --purple-bg: #f5f3ff;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15,23,41,0.05);
+  --shadow-sm: 0 1px 3px rgba(15,23,41,0.08), 0 1px 2px rgba(15,23,41,0.04);
+  --shadow: 0 4px 12px rgba(15,23,41,0.08), 0 2px 4px rgba(15,23,41,0.04);
+  --shadow-lg: 0 12px 32px rgba(15,23,41,0.12), 0 4px 8px rgba(15,23,41,0.06);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+input, select, textarea { font-family: inherit; font-size: 14px; }
+a { text-decoration: none; color: inherit; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cdd4e4; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #b0b9cf; }
