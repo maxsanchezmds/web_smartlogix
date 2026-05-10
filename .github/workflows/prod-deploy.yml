@@ -52,4 +52,5 @@ jobs:
           .github/scripts/deploy_prod.sh
 
       - name: Print URL
-        run: echo "Frontend URL: ${{ steps.deploy.outputs.app_url }}"
+        run: |
+          echo "Frontend URL: ${{ steps.deploy.outputs.app_url }}"
