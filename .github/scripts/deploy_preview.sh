@@ -24,9 +24,16 @@ aws s3 cp dist/index.html "s3://${BUCKET_NAME}/${PREVIEW_PREFIX}/index.html" \
   --cache-control "no-cache,no-store,must-revalidate" \
   --content-type "text/html"
 
+aws s3api put-object \
+  --bucket "$BUCKET_NAME" \
+  --key "${PREVIEW_PREFIX}/" \
+  --body dist/index.html \
+  --cache-control "no-cache,no-store,must-revalidate" \
+  --content-type "text/html" >/dev/null
+
 aws cloudfront create-invalidation \
   --distribution-id "$DISTRIBUTION_ID" \
-  --paths "/${PREVIEW_PREFIX}/*" >/dev/null
+  --paths "/${PREVIEW_PREFIX}/" "/${PREVIEW_PREFIX}/*" >/dev/null
 
 if [[ -n "${GITHUB_OUTPUT:-}" ]]; then
   {

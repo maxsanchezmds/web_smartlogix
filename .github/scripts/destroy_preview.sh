@@ -16,6 +16,6 @@ DISTRIBUTION_ID="$(get_param "$WEB_PREFIX" cloudfront_distribution_id)"
 aws s3 rm "s3://${BUCKET_NAME}/${PREVIEW_PREFIX}" --recursive >/dev/null || true
 aws cloudfront create-invalidation \
   --distribution-id "$DISTRIBUTION_ID" \
-  --paths "/${PREVIEW_PREFIX}/*" >/dev/null
+  --paths "/${PREVIEW_PREFIX}/" "/${PREVIEW_PREFIX}/*" >/dev/null
 
 echo "Preview frontend removed for PR ${PR_NUMBER}"
